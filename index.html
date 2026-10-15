@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5faff">
-  <meta name="description"
-    content="Nexora creates modern, responsive websites for businesses. Turn your ideas into powerful digital experiences.">
-  <title>Nexora | Websites That Grow Businesses</title>
+  <meta name="description" content="Klyvanta Technologies builds modern, responsive websites and digital solutions for growing businesses.">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Klyvanta Technologies | Building What's Next</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +19,7 @@
   <style>
     :root {
       --bg: #f5faff;
-      --surface: #fff;
+      --surface: #ffffff;
       --surface2: #eaf4ff;
       --text: #10223d;
       --muted: #64748b;
@@ -25,6 +27,7 @@
       --primary2: #58b8ff;
       --border: #dfebf7;
       --shadow: 0 18px 55px rgba(31, 104, 180, .09);
+      --header-bg: rgba(255, 255, 255, .94);
     }
 
     body.dark {
@@ -37,6 +40,7 @@
       --primary2: #8bcaff;
       --border: #263b53;
       --shadow: 0 18px 55px rgba(0, 0, 0, .2);
+      --header-bg: rgba(16, 29, 48, .95);
     }
 
     * {
@@ -59,14 +63,27 @@
       overflow-x: hidden;
     }
 
+    body.menu-open {
+      overflow-x: hidden;
+    }
+
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     button {
       font: inherit;
       cursor: pointer;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 3px;
     }
 
     .container {
@@ -78,9 +95,10 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: var(--surface);
+      background: var(--header-bg);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
     nav {
@@ -95,21 +113,22 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 25px;
+      font-size: 23px;
       font-weight: 800;
-      letter-spacing: -1.2px;
+      letter-spacing: -1.1px;
       flex-shrink: 0;
     }
 
     .logo-mark {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
-      color: white;
+      color: #fff;
       border-radius: 12px;
       background: linear-gradient(135deg, #16c8f4, #1764ed 65%, #8b5cf6);
       box-shadow: 0 6px 18px #1685f833;
+      font-size: 21px;
     }
 
     .logo span:last-child span {
@@ -119,11 +138,11 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 26px;
     }
 
     .nav-links a {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       color: var(--muted);
       transition: color .2s;
@@ -136,7 +155,7 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .theme-toggle,
@@ -147,7 +166,7 @@
       border-radius: 12px;
       width: 42px;
       height: 42px;
-      font-size: 17px;
+      font-size: 16px;
     }
 
     .menu-toggle {
@@ -162,7 +181,7 @@
       padding: 13px 21px;
       border: 1px solid transparent;
       border-radius: 12px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       transition: transform .25s, box-shadow .25s, background .25s;
     }
@@ -189,7 +208,7 @@
 
     .hero {
       position: relative;
-      padding: 105px 0 95px;
+      padding: 100px 0 90px;
       overflow: hidden;
       background:
         radial-gradient(ellipse at 80% 25%, #80c7ff30, transparent 38%),
@@ -200,7 +219,7 @@
       display: grid;
       grid-template-columns: 1.1fr .9fr;
       align-items: center;
-      gap: 60px;
+      gap: 55px;
     }
 
     .eyebrow {
@@ -212,9 +231,9 @@
       border-radius: 30px;
       background: var(--surface);
       color: var(--primary);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      margin-bottom: 23px;
+      margin-bottom: 22px;
     }
 
     .dot {
@@ -226,7 +245,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(40px, 5.5vw, 68px);
+      font-size: clamp(40px, 5.5vw, 66px);
       line-height: 1.09;
       letter-spacing: -3px;
       font-weight: 800;
@@ -243,7 +262,7 @@
       color: var(--muted);
       max-width: 510px;
       margin: 23px 0 30px;
-      font-size: 16px;
+      font-size: 15px;
     }
 
     .hero-buttons {
@@ -253,9 +272,9 @@
     }
 
     .trust-note {
-      margin-top: 27px;
+      margin-top: 25px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
     }
 
     .hero-art {
@@ -287,7 +306,7 @@
       color: #1677ed;
       font-size: 150px;
       font-weight: 800;
-      letter-spacing: -15px;
+      letter-spacing: -10px;
       box-shadow: inset 0 0 50px #1685f820;
     }
 
@@ -308,12 +327,12 @@
 
     .float-card strong {
       display: block;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .float-card small {
       color: var(--muted);
-      font-size: 11px;
+      font-size: 10px;
     }
 
     .card-top {
@@ -328,13 +347,13 @@
     }
 
     .section {
-      padding: 90px 0;
+      padding: 85px 0;
     }
 
     .section-heading {
       text-align: center;
       max-width: 650px;
-      margin: 0 auto 48px;
+      margin: 0 auto 45px;
     }
 
     .section-heading .eyebrow {
@@ -342,15 +361,15 @@
     }
 
     .section-heading h2 {
-      font-size: clamp(30px, 4vw, 43px);
+      font-size: clamp(29px, 4vw, 42px);
       line-height: 1.2;
-      letter-spacing: -1.6px;
+      letter-spacing: -1.5px;
     }
 
     .section-heading p {
       margin-top: 14px;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .services-grid,
@@ -371,7 +390,7 @@
     }
 
     .service-card {
-      padding: 28px;
+      padding: 27px;
     }
 
     .service-card:hover,
@@ -388,25 +407,25 @@
       background: var(--surface2);
       color: var(--primary);
       border-radius: 15px;
-      font-size: 24px;
-      margin-bottom: 22px;
+      font-size: 23px;
+      margin-bottom: 20px;
     }
 
     .service-card h3 {
-      font-size: 18px;
+      font-size: 17px;
       margin-bottom: 10px;
     }
 
     .service-card p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .service-card a {
       display: inline-block;
       color: var(--primary);
       margin-top: 18px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
     }
 
@@ -426,7 +445,7 @@
 
     .project-preview.car {
       background: linear-gradient(140deg, #142a46, #2566a5);
-      color: white;
+      color: #fff;
     }
 
     .project-preview.hotel {
@@ -447,13 +466,13 @@
     }
 
     .preview-title {
-      font-size: 23px;
+      font-size: 22px;
       font-weight: 800;
       letter-spacing: -1px;
     }
 
     .preview-sub {
-      font-size: 11px;
+      font-size: 10px;
       opacity: .8;
     }
 
@@ -462,18 +481,18 @@
     }
 
     .project-content h3 {
-      font-size: 18px;
+      font-size: 17px;
     }
 
     .project-content p {
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
       margin: 9px 0 18px;
     }
 
     .project-link {
       color: var(--primary);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
     }
 
@@ -481,7 +500,7 @@
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
     }
 
     .project-tags span {
@@ -518,16 +537,16 @@
 
     .process-item h3 {
       margin-bottom: 8px;
-      font-size: 17px;
+      font-size: 16px;
     }
 
     .process-item p {
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .cta {
-      padding: 20px 0 90px;
+      padding: 20px 0 85px;
     }
 
     .cta-box {
@@ -556,7 +575,7 @@
       max-width: 560px;
       margin: 15px auto 25px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .contact-grid {
@@ -566,15 +585,15 @@
     }
 
     .contact-info h3 {
-      font-size: 25px;
+      font-size: 24px;
       line-height: 1.3;
       margin-bottom: 13px;
     }
 
-    .contact-info>p {
+    .contact-info > p {
       color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 28px;
+      font-size: 13px;
+      margin-bottom: 27px;
     }
 
     .contact-item {
@@ -594,18 +613,17 @@
       border-radius: 13px;
       background: var(--surface2);
       color: var(--primary);
-      font-size: 19px;
+      font-size: 18px;
     }
 
     .contact-item small {
       display: block;
       color: var(--muted);
-      font-size: 11px;
+      font-size: 10px;
     }
 
-    .contact-item a,
-    .contact-item strong {
-      font-size: 13px;
+    .contact-item a {
+      font-size: 12px;
       overflow-wrap: anywhere;
     }
 
@@ -619,12 +637,12 @@
 
     .contact-panel h3 {
       margin-bottom: 7px;
-      font-size: 21px;
+      font-size: 20px;
     }
 
-    .contact-panel>p {
+    .contact-panel > p {
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
       margin-bottom: 22px;
     }
 
@@ -656,7 +674,7 @@
       color: var(--text);
       outline: none;
       font: inherit;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .field input:focus,
@@ -688,13 +706,13 @@
 
     .footer-inner p {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
     }
 
     .footer-links {
       display: flex;
       gap: 18px;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--muted);
     }
 
@@ -715,7 +733,7 @@
       border-radius: 50%;
       background: #20bd68;
       color: white;
-      font-size: 29px;
+      font-size: 28px;
       box-shadow: 0 8px 25px #20bd6850;
       transition: transform .2s;
     }
@@ -724,26 +742,28 @@
       transform: scale(1.1);
     }
 
-    /* SCROLL REVEAL ANIMATIONS */
+    /* Scroll reveal animations */
 
     .reveal {
       opacity: 0;
-      transform: translateY(45px);
-      transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1);
+      transform: translateY(40px);
+      transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2, .7, .2, 1);
       transition-delay: var(--delay, 0ms);
       will-change: opacity, transform;
     }
 
     .reveal-left {
-      transform: translateX(-45px);
+      transform: translateX(-40px);
     }
 
     .reveal-right {
-      transform: translateX(45px);
+      transform: translateX(40px);
     }
 
     .reveal-scale {
-      transform: scale(.92) translateY(20px);
+      transform: scale(.93) translateY(20px);
     }
 
     .reveal.visible {
@@ -752,9 +772,7 @@
     }
 
     @keyframes float {
-
-      0%,
-      100% {
+      0%, 100% {
         translate: 0 0;
       }
 
@@ -763,8 +781,7 @@
       }
     }
 
-    @media (prefers-reduced-motion:reduce) {
-
+    @media (prefers-reduced-motion: reduce) {
       *,
       *::before,
       *::after {
@@ -779,9 +796,9 @@
       }
     }
 
-    @media (max-width:900px) {
+    @media (max-width: 950px) {
       .nav-links {
-        gap: 15px;
+        gap: 14px;
       }
 
       .nav-links a {
@@ -792,17 +809,13 @@
         gap: 25px;
       }
 
-      .hero-art {
-        min-height: 300px;
-      }
-
       .services-grid,
       .projects-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width:680px) {
+    @media (max-width: 720px) {
       .container {
         width: 91%;
       }
@@ -812,7 +825,7 @@
       }
 
       .logo {
-        font-size: 22px;
+        font-size: 21px;
       }
 
       .menu-toggle {
@@ -823,7 +836,7 @@
         gap: 7px;
       }
 
-      .nav-actions>.btn {
+      .nav-actions > .btn {
         display: none;
       }
 
@@ -839,6 +852,7 @@
         padding: 12px 5% 18px;
         background: var(--surface);
         border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
       }
 
       .nav-links.open {
@@ -860,7 +874,7 @@
       }
 
       .hero h1 {
-        font-size: clamp(39px, 11vw, 55px);
+        font-size: clamp(39px, 10vw, 55px);
         letter-spacing: -2px;
       }
 
@@ -954,13 +968,17 @@
       }
     }
 
-    @media (max-width:360px) {
+    @media (max-width: 380px) {
       .hero-buttons .btn {
         width: 100%;
       }
 
       .float-card {
         padding: 11px;
+      }
+
+      .logo {
+        font-size: 19px;
       }
     }
   </style>
@@ -969,10 +987,13 @@
 <body>
 
   <header>
-    <nav class="container">
-      <a class="logo" href="#home" aria-label="Nexora home">
-        <span class="logo-mark">N</span>
-        <span>Nex<span>ora</span></span>
+    <nav class="container" aria-label="Main navigation">
+
+      <a class="logo" href="#home" aria-label="Klyvanta Technologies home">
+        <span class="logo-mark" aria-hidden="true">
+          <i class="fa-solid fa-k"></i>
+        </span>
+        <span>Kly<span>vanta</span></span>
       </a>
 
       <div class="nav-links" id="navLinks">
@@ -984,22 +1005,29 @@
       </div>
 
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+        <button class="theme-toggle" id="themeToggle"
+          type="button" aria-label="Switch to dark mode">
           <i class="fa-solid fa-moon" aria-hidden="true"></i>
         </button>
 
         <a class="btn btn-primary" href="#contact">
-          Hire Nexora <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          Hire Klyvanta
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <button class="menu-toggle" id="menuToggle"
+          type="button" aria-label="Open navigation"
+          aria-expanded="false" aria-controls="navLinks">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
       </div>
+
     </nav>
   </header>
 
   <main>
+
+    <!-- HERO -->
 
     <section class="hero" id="home">
       <div class="container hero-grid">
@@ -1010,46 +1038,47 @@
             DIGITAL SOLUTIONS FOR GROWING BUSINESSES
           </div>
 
-          <h1>We build websites that
+          <h1>
+            We build websites that
             <span class="gradient-text">move you forward.</span>
           </h1>
 
           <p>
             Your business deserves more than an online presence.
-            Nexora creates beautiful, responsive websites that help you
-            showcase your brand and connect with more customers.
+            Klyvanta Technologies creates beautiful, responsive websites
+            that help you showcase your brand and connect with more customers.
           </p>
 
           <div class="hero-buttons">
             <a class="btn btn-primary" href="#contact">
               Let's build your website
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </a>
 
             <a class="btn btn-outline" href="#projects">
               Explore our work
-              <i class="fa-solid fa-arrow-down"></i>
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
             </a>
           </div>
 
           <div class="trust-note">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
             Modern design &nbsp;
-            <i class="fa-solid fa-mobile-screen-button"></i>
+            <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
             Mobile-friendly &nbsp;
-            <i class="fa-solid fa-bullseye"></i>
+            <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
             Built for your goals
           </div>
         </div>
 
         <div class="hero-art reveal reveal-right">
           <div class="orb">
-            <div class="orb-inner">N</div>
+            <div class="orb-inner">K</div>
           </div>
 
           <div class="float-card card-top">
             <strong>
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
               Modern Design
             </strong>
             <small>Made for your business</small>
@@ -1057,7 +1086,7 @@
 
           <div class="float-card card-bottom">
             <strong>
-              <i class="fa-solid fa-arrow-trend-up"></i>
+              <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
               Ready to grow?
             </strong>
             <small>Let's build something great</small>
@@ -1067,12 +1096,15 @@
       </div>
     </section>
 
+    <!-- SERVICES -->
+
     <section class="section" id="services">
       <div class="container">
 
         <div class="section-heading reveal">
           <div class="eyebrow">WHAT WE DO</div>
-          <h2>Everything your business needs to
+          <h2>
+            Everything your business needs to
             <span class="gradient-text">stand out.</span>
           </h2>
           <p>
@@ -1085,7 +1117,7 @@
 
           <article class="service-card reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-globe"></i>
+              <i class="fa-solid fa-globe" aria-hidden="true"></i>
             </div>
             <h3>Business Websites</h3>
             <p>
@@ -1094,13 +1126,13 @@
             </p>
             <a href="#contact">
               Build my website
-              <i class="fa-solid fa-arrow-right"></i>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </article>
 
           <article class="service-card reveal" style="--delay:100ms">
             <div class="service-icon">
-              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
             </div>
             <h3>E-commerce Websites</h3>
             <p>
@@ -1109,13 +1141,13 @@
             </p>
             <a href="#contact">
               Start selling online
-              <i class="fa-solid fa-arrow-right"></i>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </article>
 
           <article class="service-card reveal" style="--delay:200ms">
             <div class="service-icon">
-              <i class="fa-solid fa-code"></i>
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
             </div>
             <h3>Custom Web Development</h3>
             <p>
@@ -1124,7 +1156,7 @@
             </p>
             <a href="#contact">
               Discuss your project
-              <i class="fa-solid fa-arrow-right"></i>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </article>
 
@@ -1132,16 +1164,19 @@
       </div>
     </section>
 
+    <!-- PROJECTS -->
+
     <section class="section projects-section" id="projects">
       <div class="container">
 
         <div class="section-heading reveal">
           <div class="eyebrow">SELECTED WORK</div>
-          <h2>Ideas brought to
+          <h2>
+            Ideas brought to
             <span class="gradient-text">the web.</span>
           </h2>
           <p>
-            Explore a sample of the types of websites Nexora can create
+            Explore examples of the types of websites Klyvanta can create
             for businesses.
           </p>
         </div>
@@ -1167,10 +1202,11 @@
                 A premium automotive concept for showcasing vehicles
                 and helping customers make enquiries.
               </p>
-              <a class="project-link" href="https://mustapha-abdul.github.io/NexoraCars/" target="_blank"
-                rel="noopener noreferrer">
+              <a class="project-link"
+                href="https://mustapha-abdul.github.io/NexoraCars/"
+                target="_blank" rel="noopener noreferrer">
                 View live demo
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
               </a>
             </div>
           </article>
@@ -1196,7 +1232,7 @@
               </p>
               <a class="project-link" href="#contact">
                 Request a similar website
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
           </article>
@@ -1222,7 +1258,7 @@
               </p>
               <a class="project-link" href="#contact">
                 Request a similar website
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
           </article>
@@ -1230,19 +1266,22 @@
         </div>
 
         <p class="trust-note reveal" style="text-align:center;margin-top:25px">
-          Business and hotel cards are service concepts, not claims of
-          completed client projects.
+          Business and hotel cards are concepts, not claims of completed
+          client projects.
         </p>
 
       </div>
     </section>
+
+    <!-- PROCESS -->
 
     <section class="section" id="process">
       <div class="container">
 
         <div class="section-heading reveal">
           <div class="eyebrow">SIMPLE PROCESS</div>
-          <h2>From your idea to
+          <h2>
+            From your idea to
             <span class="gradient-text">your website.</span>
           </h2>
           <p>
@@ -1284,13 +1323,16 @@
       </div>
     </section>
 
+    <!-- CALL TO ACTION -->
+
     <section class="cta">
       <div class="container">
         <div class="cta-box reveal reveal-scale">
 
           <div class="eyebrow">YOUR NEXT STEP STARTS HERE</div>
 
-          <h2>Ready to take your business
+          <h2>
+            Ready to take your business
             <span class="gradient-text">online?</span>
           </h2>
 
@@ -1300,23 +1342,26 @@
           </p>
 
           <a class="btn btn-primary"
-            href="https://wa.me/2348051669399?text=Hello%20Nexora%2C%20I%20need%20a%20professional%20website."
+            href="https://wa.me/2348051669399?text=Hello%20Klyvanta%20Technologies%2C%20I%20need%20a%20professional%20website."
             target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i>
-            Chat with Nexora on WhatsApp
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            Chat with Klyvanta on WhatsApp
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </a>
 
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
+
     <section class="section" id="contact">
       <div class="container">
 
         <div class="section-heading reveal">
           <div class="eyebrow">GET IN TOUCH</div>
-          <h2>Let's talk about
+          <h2>
+            Let's talk about
             <span class="gradient-text">your project.</span>
           </h2>
           <p>
@@ -1336,7 +1381,7 @@
 
             <div class="contact-item">
               <div class="contact-icon">
-                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
               </div>
               <div>
                 <small>Email address</small>
@@ -1348,7 +1393,7 @@
 
             <div class="contact-item">
               <div class="contact-icon">
-                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
               </div>
               <div>
                 <small>Phone number 1</small>
@@ -1358,7 +1403,7 @@
 
             <div class="contact-item">
               <div class="contact-icon">
-                <i class="fa-solid fa-mobile-screen-button"></i>
+                <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
               </div>
               <div>
                 <small>Phone number 2</small>
@@ -1368,9 +1413,9 @@
 
             <div style="margin-top:25px">
               <a class="btn btn-primary"
-                href="https://wa.me/2348051669399?text=Hello%20Nexora%2C%20I%20want%20to%20discuss%20a%20website."
+                href="https://wa.me/2348051669399?text=Hello%20Klyvanta%20Technologies%2C%20I%20want%20to%20discuss%20a%20website."
                 target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 Message us on WhatsApp
               </a>
             </div>
@@ -1383,12 +1428,14 @@
             <div class="form-row">
               <div class="field">
                 <label for="name">Your name *</label>
-                <input id="name" name="name" autocomplete="name" placeholder="e.g. Musa Ibrahim" required>
+                <input id="name" name="name" autocomplete="name"
+                  placeholder="e.g. Musa Ibrahim" required>
               </div>
 
               <div class="field">
                 <label for="business">Business name</label>
-                <input id="business" name="business" autocomplete="organization" placeholder="Your business">
+                <input id="business" name="business" autocomplete="organization"
+                  placeholder="Your business">
               </div>
             </div>
 
@@ -1421,13 +1468,14 @@
             <div class="field">
               <label for="details">Tell us about your project *</label>
               <textarea id="details" name="details"
-                placeholder="What does your business do, and what should the website include?" required></textarea>
+                placeholder="What does your business do, and what should the website include?"
+                required></textarea>
             </div>
 
             <button class="btn btn-primary" type="submit">
-              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
               Send project enquiry via WhatsApp
-              <i class="fa-solid fa-arrow-right"></i>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </button>
           </form>
 
@@ -1437,16 +1485,20 @@
 
   </main>
 
+  <!-- FOOTER -->
+
   <footer>
     <div class="container footer-inner">
 
-      <a class="logo" href="#home" aria-label="Nexora home">
-        <span class="logo-mark">N</span>
-        <span>Nex<span>ora</span></span>
+      <a class="logo" href="#home" aria-label="Klyvanta Technologies home">
+        <span class="logo-mark" aria-hidden="true">
+          <i class="fa-solid fa-k"></i>
+        </span>
+        <span>Kly<span>vanta</span></span>
       </a>
 
       <p>
-        © <span id="year"></span> Nexora. Built for what's next.
+        © <span id="year"></span> Klyvanta Technologies. Building what's next.
       </p>
 
       <div class="footer-links">
@@ -1459,13 +1511,18 @@
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/2348051669399?text=Hello%20Nexora%2C%20I%20need%20a%20website."
-    target="_blank" rel="noopener noreferrer" aria-label="Contact Nexora on WhatsApp">
+  <!-- FLOATING WHATSAPP BUTTON -->
+
+  <a class="whatsapp-float"
+    href="https://wa.me/2348051669399?text=Hello%20Klyvanta%20Technologies%2C%20I%20need%20a%20website."
+    target="_blank" rel="noopener noreferrer"
+    aria-label="Contact Klyvanta Technologies on WhatsApp">
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <script>
     // MOBILE NAVIGATION
+
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
 
@@ -1490,15 +1547,16 @@
       link.addEventListener('click', () => setMenuState(false));
     });
 
-    // DARK MODE / LIGHT MODE
+    // DARK MODE AND LIGHT MODE
+
     const themeToggle = document.getElementById('themeToggle');
 
     let savedTheme = null;
 
     try {
-      savedTheme = localStorage.getItem('nexora-theme');
+      savedTheme = localStorage.getItem('klyvanta-theme');
     } catch (error) {
-      // Theme switching still works if browser storage is unavailable.
+      // Theme switching remains available if storage is blocked.
     }
 
     if (savedTheme === 'dark') {
@@ -1528,17 +1586,18 @@
 
       try {
         localStorage.setItem(
-          'nexora-theme',
+          'klyvanta-theme',
           document.body.classList.contains('dark') ? 'dark' : 'light'
         );
       } catch (error) {
-        // Theme still changes for the current page.
+        // Theme still changes for this page.
       }
 
       updateThemeButton();
     });
 
     // SCROLL-TRIGGERED REVEAL ANIMATIONS
+
     const revealElements = document.querySelectorAll('.reveal');
 
     if ('IntersectionObserver' in window) {
@@ -1559,7 +1618,8 @@
       revealElements.forEach(element => element.classList.add('visible'));
     }
 
-    // PROJECT ENQUIRY FORM: PREPARES WHATSAPP MESSAGE
+    // WHATSAPP PROJECT ENQUIRY FORM
+
     document.getElementById('contactForm').addEventListener('submit', function (event) {
       event.preventDefault();
 
@@ -1575,7 +1635,7 @@
       }
 
       const message = [
-        'Hello Nexora! I would like to discuss a website project.',
+        'Hello Klyvanta Technologies! I would like to discuss a website project.',
         '',
         'Name: ' + name,
         'Business: ' + (business || 'Not provided'),
@@ -1587,22 +1647,23 @@
       const whatsappURL =
         'https://wa.me/2348051669399?text=' + encodeURIComponent(message);
 
+      // Open WhatsApp with the customer's prepared enquiry.
       const whatsappWindow = window.open(
         whatsappURL,
         '_blank',
         'noopener,noreferrer'
       );
 
-      // If the browser blocks the new window, open WhatsApp in this tab.
+      // Fallback if the browser blocks a new tab.
       if (!whatsappWindow) {
         window.location.href = whatsappURL;
       }
     });
 
-    // CURRENT YEAR
+    // AUTOMATIC COPYRIGHT YEAR
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
-
 </html>
